@@ -6,14 +6,14 @@ const app = express()
 
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
-app.use(express.static('public'))
+// app.use(express.static('public'))
 app.use(express.json())
 
-import handlerFunctions from './controller.js'
+// import handlerFunctions from './controller.js'
 
-app.get('/', handlerFunctions.get)
-app.post('/', handlerFunctions.add)
-app.delete('/', handlerFunctions.delete)
-app.post('/', handlerFunctions.save)
+// app.get('/', handlerFunctions.get)
+// app.post('/', handlerFunctions.add)
+// app.delete('/', handlerFunctions.delete)
+// app.post('/', handlerFunctions.save)
 
-ViteExpress.listen(app, 8488, () => console.log('http://localhost:8488'))
+ViteExpress.listen(app, 7488, () => console.log('http://localhost:7488'))
