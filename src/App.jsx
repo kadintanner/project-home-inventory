@@ -1,13 +1,13 @@
-import { useState } from 'react'
-import Welcome from './components/Welcome'
+import { Navbar } from 'react-bootstrap'
 import './App.css'
+import Login from './components/Login'
+import ItemTable from './components/ItemTable'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Welcome />
+      <ItemTable />
     </>
   )
 }

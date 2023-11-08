@@ -12,7 +12,7 @@ app.use(express.json())
 // import handlerFunctions from './controller.js'
 
 // app.get('/', handlerFunctions.get)
-// app.post('/', handlerFunctions.add)
+// app.post('/addItem', handlerFunctions.addItem)
 // app.delete('/', handlerFunctions.delete)
 // app.post('/', handlerFunctions.save)
 
