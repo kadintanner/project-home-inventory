@@ -1,24 +1,52 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React from 'react';
+import { useState } from 'react'
+import axios from 'axios'
 
 const Login = () => {
+
+    const [username, setUsername] = useState('')
+    const [password, setPassword] = useState('')
+
+    const [loginStatus, setLoginStatus] = useState('')
+
+const login = () => {
+    axios.post('http://localhost7488/login', {
+        username: username,
+        password: password
+    }).then((response) => {
+        if (response.data.message) {
+            setLoginStatus(response.data.message)
+        } else {
+            setLoginStatus(response.data[0].username)
+        }
+        console.log(response.data)
+    })
+} 
+
     return (
         <div>
-            <h1>Welcome</h1>
-            <form>
-                <input type="text"></input>
-                    <br></br>
-                <input type="password"></input>
-                    <br></br>
-                    <br></br>
-                <button>Submit</button>
-            </form>
+            <div className='login'>
+                <form>
+                <h1>Login</h1>
+                <input
+                    type='text'
+                    placeholder='Username'
+                    onChange={(e) => { setUsername(e.target.value) }}
+                />
+                <br></br>
+                <input
+                    type='password'
+                    placeholder='Password'
+                    onChange={(e) => { setPassword(e.target.value) }}
+                />
+                <br></br>
+                <br></br>
+                <button onClick={login}>Login</button>
+                </form>
+            </div>
+            <h3>{loginStatus}</h3>
         </div>
     );
 }
-
-
 
 export default Login

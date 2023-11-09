@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { async } from 'seed/lib/seed'
 
 const ItemTable = ({ initialItemData }) => {
   const [currentData, setCurrentData] = useState(initialItemData)
@@ -19,11 +18,11 @@ const ItemTable = ({ initialItemData }) => {
 
   const addRow = async () => {
     const response = await axios.post('/addItem', { description: 'New Item' })
-    setCurrentData([...currentData, response.data])
+    setCurrentData([...currentData, response.data])()
   }
 
   const deleteRow = async (itemId) => {
-    const response = await axios.delete(`/deleteInvoice/${itemId}`)
+    const response = await axios.delete(`/deleteItem/${itemId}`)
     if (!response.data.error) {
       const filteredList = currentData.filter((item) => item.id !== itemId)
       setCurrentData(filteredList)
