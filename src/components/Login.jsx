@@ -9,8 +9,8 @@ const Login = () => {
 
     const [loginStatus, setLoginStatus] = useState('')
 
-const login = () => {
-    axios.post('http://localhost7488/login', {
+const login = async () => {
+    await axios.post('/login', {
         username: username,
         password: password
     }).then((response) => {

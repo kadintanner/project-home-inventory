@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom';
 
 const Registration = () => {
 
@@ -10,7 +9,7 @@ const Registration = () => {
 
     const register = async (event) => {
         event.preventDefault()
-        await axios.post('http://localhost:7488/register', {
+        await axios.post('/register', {
             username: usernameReg,
             password: passwordReg
         })
@@ -32,7 +31,7 @@ const Registration = () => {
                     <button onClick={register}>Create Account</button>
                 </form>
                     <br></br>
-                <Link to='/'>Already have an account? Login here</Link>
+                <a href='/login'>Already have an account? Login here</a>
             </div>
         </div>
     );

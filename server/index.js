@@ -2,9 +2,18 @@ import express from 'express'
 import ViteExpress from 'vite-express'
 import morgan from 'morgan'
 import cors from 'cors'
+import session from 'express-session'
 
 const app = express()
+const PORT = 7488
 
+app.use(
+    session({
+      resave: false,
+      saveUninitialized: true,
+      secret: 'some random string',
+    })
+  )
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 // app.use(express.static('public'))

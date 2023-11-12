@@ -11,9 +11,16 @@ const handlerFunctions = {
     },
 
     register: async (req, res) => {
-        const username = req.body.username
-        const password = req.body.password
-        console.log(username)
+        const { username, password } = req.body
+
+        const alreadyExists = await User.findAll({
+            where: {
+                username
+            } 
+        }) 
+        if (alreadyExists[0]) {
+            res.status(400).send('Username already exists')
+        } else {
 
         const newUser = await User.create({
             username: username,
@@ -21,25 +28,15 @@ const handlerFunctions = {
         })
 
         req.session.user = newUser
+
+        res.send({
+            message: 'account created',
+            user_id: newUser.user_id
+        })
+    }
     },
 
-    login: (req, res) => {
-        const username = req.body.username
-        const password = req.body.password
-        db.query('SELECT * FROM users WHERE username = ? AND password = ?',
-            [username, password],
-            (err, result) => {
-                if (err) {
-                    res.send({ err: err })
-                }
-                if (result.length > 0) {
-                    res.send(result)
-                } else {
-                    res.send({ message: 'Invalid Entry' })
-                }
-            }
-        )
-    }
+    login: (req, res) => {}
 
 }
 
