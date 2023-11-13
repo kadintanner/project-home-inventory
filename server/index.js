@@ -28,6 +28,6 @@ app.get('/login', handlerFunctions.login)
 app.get('/getItem', handlerFunctions.getItem)
 app.post('/addItem', handlerFunctions.addItem)
 app.delete('/deleteItem/:id', handlerFunctions.deleteItem)
-app.post('/editItem/:id', handlerFunctions.editItem)
+app.put('/editItem/:id', handlerFunctions.editItem)
 
 ViteExpress.listen(app, 7488, () => console.log('http://localhost:7488'))

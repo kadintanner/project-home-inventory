@@ -79,11 +79,11 @@ const handlerFunctions = {
         const index = TEST_DATA.findIndex(item => item.id == id)
         const tableItem = TEST_DATA[index]
 
-        invoiceItem.name = name
-        invoiceItem.description = description
-        invoiceItem.cost = +cost
-        invoiceItem.date = date
-        invoiceItem.location = location
+        tableItem.name = name
+        tableItem.description = description
+        tableItem.cost = cost
+        tableItem.date = date
+        tableItem.location = location
 
         res.send(tableItem)
     },

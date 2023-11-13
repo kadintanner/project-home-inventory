@@ -17,7 +17,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
     const [location, setLocation] = useState(initialItemData.location)
 
     const changeNormalMode = async () => {
-        let bodyObject = {
+        let bodyObj = {
             name: name,
             description: description,
             cost: cost,
@@ -25,7 +25,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
             location: location
         }
 
-        const response = await axios.put(`/editItem/${id}`, bodyObject)
+        const response = await axios.put(`/editItem/${id}`, bodyObj)
 
         if (!response.data.error) {
             setEditMode(false)
