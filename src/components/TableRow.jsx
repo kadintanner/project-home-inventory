@@ -36,49 +36,49 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
     }
 
     const changeEditMode = () => setEditMode(true)
-    
+
 
     return (
         <>
             <tr>
-            <NameCell 
-                isEditing={editMode} 
-                value={name}
-                onValueChange={setName}
-            />
+                <NameCell
+                    isEditing={editMode}
+                    value={name}
+                    onValueChange={setName}
+                />
 
-            <DescriptionCell 
-                isEditing={editMode} 
-                value={description}
-                onValueChange={setDescription}
-            />
+                <DescriptionCell
+                    isEditing={editMode}
+                    value={description}
+                    onValueChange={setDescription}
+                />
 
-            <CostCell 
-                isEditing={editMode}
-                value={cost}
-                onValueChange={setCost}
-            />
+                <CostCell
+                    isEditing={editMode}
+                    value={cost}
+                    onValueChange={setCost}
+                />
 
-            <DateCell 
-                isEditing={editMode}
-                value={date}
-                onValueChange={setDate}
-            />
+                <DateCell
+                    isEditing={editMode}
+                    value={date}
+                    onValueChange={setDate}
+                />
 
-            <LocationCell 
-                isEditing={editMode}
-                value={location}
-                onValueChange={setLocation}
-            />
+                <LocationCell
+                    isEditing={editMode}
+                    value={location}
+                    onValueChange={setLocation}
+                />
 
-            <ModeButtons 
-                isEditing={editMode} 
-                saveClick={changeNormalMode}
-                editClick={changeEditMode}
-                funkyDelete={deleteFunc}
-            />
+                <ModeButtons
+                    isEditing={editMode}
+                    saveClick={changeNormalMode}
+                    editClick={changeEditMode}
+                    funkyDelete={deleteFunc}
+                />
                 <td>
-            
+
                 </td>
             </tr>
         </>

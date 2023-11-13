@@ -12,7 +12,7 @@ const ItemTable = ({ initialItemData }) => {
       <TableRow
         key={id}
         id={id}
-        initialInvoiceData={{ name, description, cost, date, location }}
+        initialItemData={{ name, description, cost, date, location }}
         initialIsEditing={isEditing}
         deleteFunc={() => deleteRow(id)}
       />
