@@ -3,9 +3,9 @@ import DescriptionCell from './DescriptionCell'
 import CostCell from './CostCell'
 import DateCell from './DateCell'
 import LocationCell from './LocationCell'
-import formatCurrency from '../utils/formatCurrency'
 import { useState } from 'react'
 import axios from 'axios'
+import ModeButtons from './ModeButtons'
 
 const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
 
@@ -14,7 +14,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
     const [description, setDescription] = useState(initialItemData.description)
     const [cost, setCost] = useState(initialItemData.cost)
     const [date, setDate] = useState(initialItemData.date)
-    const [location, setLocation] = useState(initialItemData)
+    const [location, setLocation] = useState(initialItemData.location)
 
     const changeNormalMode = async () => {
         let bodyObject = {
@@ -34,7 +34,6 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
         }
 
     }
-
 
     const changeEditMode = () => setEditMode(true)
     
@@ -79,7 +78,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
                 funkyDelete={deleteFunc}
             />
                 <td>
-                    
+            
                 </td>
             </tr>
         </>

@@ -1,10 +1,13 @@
 import axios from 'axios'
 import { useState } from 'react'
+import TableHeader from './TableHeader'
+import TableRow from './TableRow'
+import AddButton from './AddButton'
 
 const ItemTable = ({ initialItemData }) => {
   const [currentData, setCurrentData] = useState(initialItemData)
-  const rows = currentData.map((item) => {
-    const { id, name, description, cost, date, location, isEditing } = item
+  const rows = currentData.map((tableItem) => {
+    const { id, name, description, cost, date, location, isEditing } = tableItem
     return (
       <TableRow
         key={id}
@@ -18,13 +21,13 @@ const ItemTable = ({ initialItemData }) => {
 
   const addRow = async () => {
     const response = await axios.post('/addItem', { description: 'New Item' })
-    setCurrentData([...currentData, response.data])()
+    setCurrentData([...currentData, response.data])
   }
 
   const deleteRow = async (itemId) => {
     const response = await axios.delete(`/deleteItem/${itemId}`)
     if (!response.data.error) {
-      const filteredList = currentData.filter((item) => item.id !== itemId)
+      const filteredList = currentData.filter((tableItem) => tableItem.id !== itemId)
       setCurrentData(filteredList)
     }
   }

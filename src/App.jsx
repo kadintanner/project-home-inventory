@@ -3,11 +3,11 @@ import Login from './components/Login'
 import ItemTable from './components/ItemTable'
 import Registration from './components/Registration'
 
-function App() {
+function App({ initialData }) {
 
   return (
     <>
-      <Registration />
+      <ItemTable initialItemData={initialData}/>
     </>
   )
 }

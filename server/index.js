@@ -22,6 +22,7 @@ app.use(cors())
 
 import handlerFunctions from './controller.js'
 
+app.get('/items', handlerFunctions.items)
 app.post('/register', handlerFunctions.register)
 app.get('/login', handlerFunctions.login)
 app.get('/getItem', handlerFunctions.getItem)
