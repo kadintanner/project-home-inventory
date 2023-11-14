@@ -1,9 +1,11 @@
-function Navbar() {
+import ItemTable from "./ItemTable";
+
+function Navbar({ initialData }) {
   
   return (
-    <div>
-
-    </div>
+    <>
+      <ItemTable initialItemData={initialData} />
+    </>
   );
 }
 

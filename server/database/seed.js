@@ -24,6 +24,7 @@ const usersInDB = await Promise.all(
 
 let itemTestData = [
     {
+        name: 'Test Name',
         description: 'Test description goes here.',
         cost: 0,
         date_aquired: 11 / 0o7 / 2023,
@@ -34,6 +35,7 @@ let itemTestData = [
 const itemsInDB = await Promise.all(
     itemTestData.map(async (item) => {
         const newItem = await Item.create({
+            name: item.name,
             description: item.description,
             cost: item.cost,
             date_aquired: item.date_aquired,

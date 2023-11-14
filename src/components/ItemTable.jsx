@@ -3,6 +3,7 @@ import { useState } from 'react'
 import TableHeader from './TableHeader'
 import TableRow from './TableRow'
 import AddButton from './AddButton'
+import CategoryTabs from './CategoryTabs'
 
 const ItemTable = ({ initialItemData }) => {
   const [currentData, setCurrentData] = useState(initialItemData)
@@ -34,6 +35,7 @@ const ItemTable = ({ initialItemData }) => {
 
   return (
     <div>
+      <CategoryTabs />
       <table>
         <thead>
           <TableHeader />

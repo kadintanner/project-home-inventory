@@ -48,6 +48,9 @@ Item.init(
             autoIncrement: true,
             primaryKey: true
         },
+        name: {
+            type: DataTypes.STRING
+        },
         description: {
             type: DataTypes.TEXT
         },

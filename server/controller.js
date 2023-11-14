@@ -1,12 +1,12 @@
 import { User, Item, Category } from './database/model.js'
 
 let TEST_DATA = [
-    { id: 0, name: 'test data 1', description: 'test description', cost: 11, date: 11.9, location: 'United States' },
-    { id: 1, name: 'test data 4', description: 'test description', cost: 11, date: 11.9, location: 'United States' },
-    { id: 2, name: 'test data 3', description: 'test description', cost: 11, date: 11.9, location: 'United States' }
+    { id: 0, name: 'test data 1', description: 'test description', cost: 50, date: 11.9, location: 'United States' },
+    { id: 1, name: 'test data 2', description: 'test description', cost: 11, date: 11.9, location: 'United States' },
+    { id: 2, name: 'test data 3', description: 'test description', cost: 235, date: 11.9, location: 'United States' }
 ]
 
-let globalId = 2
+let globalId = 3
 
 const handlerFunctions = {
 
