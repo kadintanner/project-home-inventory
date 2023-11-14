@@ -1,24 +1,26 @@
+import { Button } from 'react-bootstrap';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
 function CategoryTabs() {
   return (
+    <>
     <Tabs
       defaultActiveKey="home"
       transition={false}
       id="noanim-tab-example"
       className="mb-3"
     >
-      <Tab eventKey="home" title="All Items">
-        Category content for all items
+      <Tab eventKey="all" title="All Items">
+        <h1>All Items</h1>
       </Tab>
-      <Tab eventKey="profile" title="Profile">
-        Tab content for Profile
+      <Tab eventKey="category" title="Category">
+        <h1>Category</h1>
       </Tab>
-      <Tab eventKey="contact" title="Contact" disabled>
-        Tab content for Contact
-      </Tab>
+      <Button eventKey="new" title="Add Category">
+      </Button>
     </Tabs>
+      </>
   );
 }
 

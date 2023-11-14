@@ -4,6 +4,7 @@ import TableHeader from './TableHeader'
 import TableRow from './TableRow'
 import AddButton from './AddButton'
 import CategoryTabs from './CategoryTabs'
+import Navbar from './Navbar'
 
 const ItemTable = ({ initialItemData }) => {
   const [currentData, setCurrentData] = useState(initialItemData)
@@ -35,7 +36,14 @@ const ItemTable = ({ initialItemData }) => {
 
   return (
     <div>
+      <Navbar sticky="top" />
+      <br/>
+      <br/>
+      <br/>
       <CategoryTabs />
+        <br/>
+        <br/>
+        <br/>
       <table>
         <thead>
           <TableHeader />
