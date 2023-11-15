@@ -5,6 +5,7 @@ import TableRow from './TableRow'
 import AddButton from './AddButton'
 import CategoryTabs from './CategoryTabs'
 import Navbar from './Navbar'
+import Table from 'react-bootstrap/Table';
 
 const ItemTable = ({ initialItemData }) => {
   const [currentData, setCurrentData] = useState(initialItemData)
@@ -35,6 +36,7 @@ const ItemTable = ({ initialItemData }) => {
   }
 
   return (
+
     <div>
       <Navbar sticky="top" />
       <br/>
@@ -44,19 +46,17 @@ const ItemTable = ({ initialItemData }) => {
         <br/>
         <br/>
         <br/>
-      <table>
-        <thead>
-          <TableHeader />
-        </thead>
-
-        <tbody>
-          {rows}
-        </tbody>
-
-        <tfoot>
+    <Table striped bordered hover size="sm">
+      <thead>
+        <TableHeader />
+      </thead>
+      <tbody>
+      {rows}
+      </tbody>
+    </Table>
+       
           <AddButton addClick={addRow} />
-        </tfoot>
-      </table>
+      
     </div>
   );
 }

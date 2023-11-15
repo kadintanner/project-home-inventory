@@ -1,4 +1,3 @@
-import { Button } from 'react-bootstrap';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 
@@ -17,8 +16,6 @@ function CategoryTabs() {
       <Tab eventKey="category" title="Category">
         <h1>Category</h1>
       </Tab>
-      <Button eventKey="new" title="Add Category">
-      </Button>
     </Tabs>
       </>
   );
