@@ -6,6 +6,7 @@ import LocationCell from './LocationCell'
 import { useState } from 'react'
 import axios from 'axios'
 import ModeButtons from './ModeButtons'
+import CategoryCell from './CategoryCell'
 
 const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
 
@@ -15,6 +16,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
     const [cost, setCost] = useState(initialItemData.cost)
     const [date, setDate] = useState(initialItemData.date)
     const [location, setLocation] = useState(initialItemData.location)
+    const [category, setCategory] = useState(initialItemData.category)
 
     const changeNormalMode = async () => {
         let bodyObj = {
@@ -22,7 +24,8 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
             description: description,
             cost: cost,
             date: date,
-            location: location
+            location: location,
+            category: category
         }
 
         const response = await axios.put(`/editItem/${id}`, bodyObj)
@@ -69,6 +72,12 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
                     isEditing={editMode}
                     value={location}
                     onValueChange={setLocation}
+                />
+
+                <CategoryCell
+                    isEditing={editMode}
+                    value={category}
+                    onValueChange={setCategory}
                 />
 
                 <ModeButtons

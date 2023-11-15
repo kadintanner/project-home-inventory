@@ -7,7 +7,8 @@ const TableHeader = () => {
             <th>Cost</th>
             <th>Date</th>
             <th>Location</th>
-            <th></th> {/* this will sit above edit buttons */}
+            <th>Category</th>
+            <th></th> {/* this sits above edit buttons */}
         </tr>
     )
 }

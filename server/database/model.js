@@ -63,6 +63,9 @@ Item.init(
         location_aquired: {
             type: DataTypes.STRING
         },
+        category: {
+            type: DataTypes.STRING
+        }
     },
     {
         modelName: 'Item',
