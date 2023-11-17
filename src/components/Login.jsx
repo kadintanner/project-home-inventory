@@ -42,6 +42,9 @@ const login = async () => {
                 <br></br>
                 <br></br>
                 <button onClick={login}>Login</button>
+                <br />
+                <br />
+                <a href='/register'>New to Home Inventory? Create an account here</a>
                 </form>
             </div>
             <h3>{loginStatus}</h3>

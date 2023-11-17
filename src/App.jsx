@@ -4,11 +4,11 @@ import ItemTable from './components/ItemTable'
 import Registration from './components/Registration'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App({ initialData }) {
+function App() {
 
   return (
     <>
-      <ItemTable initialItemData={initialData} />
+      <ItemTable />
     </>
   )
 }

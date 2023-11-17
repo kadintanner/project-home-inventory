@@ -1,15 +1,32 @@
 import axios from 'axios'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import TableHeader from './TableHeader'
 import TableRow from './TableRow'
 import AddButton from './AddButton'
 import CategoryTabs from './CategoryTabs'
 import Navbar from './Navbar'
 import Table from 'react-bootstrap/Table';
+import AddCategoryButton from './bootstrap-tabs/AddCategoryButton'
 
-const ItemTable = ({ initialItemData }) => {
-  const [currentData, setCurrentData] = useState(initialItemData)
-  const rows = currentData.map((tableItem) => {
+const ItemTable = () => {
+  const [currentItemData, setCurrentItemData] = useState([])
+
+  const getData = async () => {
+    await axios.get('/items')
+      .then((response) => {
+        setCurrentItemData(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+
+  }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
+  const rows = currentItemData.map((tableItem) => {
     const { id, name, description, cost, date, location, isEditing } = tableItem
     return (
       <TableRow
@@ -24,14 +41,14 @@ const ItemTable = ({ initialItemData }) => {
 
   const addRow = async () => {
     const response = await axios.post('/addItem', { description: 'New Item' })
-    setCurrentData([...currentData, response.data])
+    setCurrentItemData([...currentItemData, response.data])
   }
 
   const deleteRow = async (itemId) => {
     const response = await axios.delete(`/deleteItem/${itemId}`)
     if (!response.data.error) {
-      const filteredList = currentData.filter((tableItem) => tableItem.id !== itemId)
-      setCurrentData(filteredList)
+      const filteredList = currentItemData.filter((tableItem) => tableItem.id !== itemId)
+      setCurrentItemData(filteredList)
     }
   }
 
@@ -39,24 +56,24 @@ const ItemTable = ({ initialItemData }) => {
 
     <div>
       <Navbar sticky="top" />
-      <br/>
-      <br/>
-      <br/>
+      <br />
+      <br />
+      <br />
       <CategoryTabs />
-        <br/>
-        <br/>
-        <br/>
-    <Table striped bordered hover size="sm">
-      <thead>
-        <TableHeader />
-      </thead>
-      <tbody>
-      {rows}
-      </tbody>
-    </Table>
-       
-          <AddButton addClick={addRow} />
-      
+      <br />
+      <br />
+      <Table 
+        id="item-table"
+        striped bordered hover size="sm">
+        <thead>
+          <TableHeader />
+        </thead>
+        <tbody>
+          {rows}
+        </tbody>
+      </Table>
+      <AddButton addClick={addRow} />
+      <AddCategoryButton />
     </div>
   );
 }

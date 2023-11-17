@@ -27,7 +27,7 @@ let itemTestData = [
         name: 'Test Name',
         description: 'Test description goes here.',
         cost: 0,
-        date_aquired: 11 / 0o7 / 2023,
+        date_aquired: 2023-11-16,
         location_aquired: 'Test Location'
     }
 ]

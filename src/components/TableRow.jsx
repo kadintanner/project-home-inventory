@@ -86,9 +86,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
                     editClick={changeEditMode}
                     funkyDelete={deleteFunc}
                 />
-                <td>
-
-                </td>
+            
             </tr>
         </>
     )

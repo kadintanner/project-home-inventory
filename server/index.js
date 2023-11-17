@@ -22,12 +22,18 @@ app.use(cors())
 
 import handlerFunctions from './controller.js'
 
-app.get('/items', handlerFunctions.items)
-app.post('/register', handlerFunctions.register)
+// LOGIN & REGISTER
 app.get('/login', handlerFunctions.login)
+app.post('/register', handlerFunctions.register)
+
+// ITEM TABLE
+app.get('/items', handlerFunctions.items)
 app.get('/getItem', handlerFunctions.getItem)
 app.post('/addItem', handlerFunctions.addItem)
-app.delete('/deleteItem/:id', handlerFunctions.deleteItem)
 app.put('/editItem/:id', handlerFunctions.editItem)
+app.delete('/deleteItem/:id', handlerFunctions.deleteItem)
+
+// CATEGORY TABS
+// TO DO
 
 ViteExpress.listen(app, 7488, () => console.log('http://localhost:7488'))

@@ -10,13 +10,7 @@ let globalId = 3
 
 const handlerFunctions = {
 
-    items: (req, res) => {
-        res.send(TEST_DATA)
-    },
-
-    getItem: (req, res) => {
-        const items = Item.findAll()
-    },
+    // LOGIN & REGISTER FUNCTIONS
 
     register: async (req, res) => {
         const { username, password } = req.body
@@ -44,13 +38,21 @@ const handlerFunctions = {
         }
     },
 
-    login: (req, res) => {
+    login: (req, res) => {},
 
+    // ITEM TABLE FUNCTIONS
+
+    items: (req, res) => {
+        res.send(TEST_DATA)
     },
+
+    getItem: (req, res) => {
+        const items = Item.findAll()
+    },
+
 
     addItem: (req, res) => {
         const description = req.body.description
-        // const { rate, hours } = req.body
 
         const newObj = {
             id: globalId,
@@ -87,6 +89,10 @@ const handlerFunctions = {
 
         res.send(tableItem)
     },
+
+    // CATEGORY TAB FUNCTIONS
+
+    // TO DO
 
 }
 
