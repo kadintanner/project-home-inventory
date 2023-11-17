@@ -7,6 +7,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import ModeButtons from './ModeButtons'
 import CategoryCell from './CategoryCell'
+import formatCurrency from '../utils/formatCurrency'
 
 const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
 
@@ -86,7 +87,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
                     editClick={changeEditMode}
                     funkyDelete={deleteFunc}
                 />
-            
+               <td>{formatCurrency}</td>
             </tr>
         </>
     )

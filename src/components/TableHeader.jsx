@@ -2,7 +2,7 @@ const TableHeader = () => {
 
     return (
         <tr>
-            <th>Item Name</th>
+            <th>Name</th>
             <th>Description</th>
             <th>Cost</th>
             <th>Date</th>

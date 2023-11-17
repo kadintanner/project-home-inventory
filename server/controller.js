@@ -1,9 +1,9 @@
 import { User, Item, Category } from './database/model.js'
 
 let TEST_DATA = [
-    { id: 0, name: 'test data 1', description: 'test description', cost: 50, date: 11.9, location: 'United States', Category: 'Sports' },
-    { id: 1, name: 'test data 2', description: 'test description', cost: 11, date: 11.9, location: 'United States', Category: 'Sports' },
-    { id: 2, name: 'test data 3', description: 'test description', cost: 235, date: 11.9, location: 'United States', Category: 'Sports' }
+    { id: 0, name: 'test data 1', description: 'test description', cost: 50, date: null, location: 'United States', Category: 'Sports' },
+    { id: 1, name: 'test data 2', description: 'test description', cost: 11, date: null, location: 'United States', Category: 'Sports' },
+    { id: 2, name: 'test data 3', description: 'test description', cost: 235, date: null, location: 'United States', Category: 'Sports' }
 ]
 
 let globalId = 3

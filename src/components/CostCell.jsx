@@ -1,3 +1,5 @@
+import formatCurrency from "../utils/formatCurrency";
+
 const CostCell = ({ isEditing, value, onValueChange }) => {
 
     return isEditing ? (
@@ -9,7 +11,9 @@ const CostCell = ({ isEditing, value, onValueChange }) => {
         />
       </td>
     ) : (
-      <td>{value}</td>
+      <td>{formatCurrency(value)}</td>
+      
+      
     )
   }
   

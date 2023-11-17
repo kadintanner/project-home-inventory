@@ -58,7 +58,7 @@ Item.init(
             type: DataTypes.INTEGER
         },
         date_aquired: {
-            type: DataTypes.DATE
+            type: DataTypes.STRING
         },
         location_aquired: {
             type: DataTypes.STRING
