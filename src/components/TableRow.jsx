@@ -44,6 +44,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
 
     return (
         <>
+                <td>{formatCurrency}</td>
             <tr>
                 <NameCell
                     isEditing={editMode}
@@ -61,7 +62,7 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
                     isEditing={editMode}
                     value={cost}
                     onValueChange={setCost}
-                />
+                    />
 
                 <DateCell
                     isEditing={editMode}
@@ -87,7 +88,6 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
                     editClick={changeEditMode}
                     funkyDelete={deleteFunc}
                 />
-               <td>{formatCurrency}</td>
             </tr>
         </>
     )

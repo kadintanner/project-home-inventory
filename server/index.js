@@ -33,6 +33,8 @@ app.post('/addItem', handlerFunctions.addItem)
 app.put('/editItem/:id', handlerFunctions.editItem)
 app.delete('/deleteItem/:id', handlerFunctions.deleteItem)
 
+// app.post('/newItem', handlerFunctions.newItem)
+
 // CATEGORY TABS
 // TO DO
 

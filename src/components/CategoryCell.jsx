@@ -1,3 +1,5 @@
+import './itemTable.css'
+
 const CategoryCell = ({ isEditing, value, onValueChange }) => {
 
     return isEditing ? (

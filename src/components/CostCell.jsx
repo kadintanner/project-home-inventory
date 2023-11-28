@@ -1,10 +1,12 @@
+import './itemTable.css'
+
 import formatCurrency from "../utils/formatCurrency";
 
 const CostCell = ({ isEditing, value, onValueChange }) => {
 
     return isEditing ? (
       <td>
-        <input
+        <textarea
           type="text"
           value={value}
           onChange={(e) => onValueChange(e.target.value)}

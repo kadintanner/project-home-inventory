@@ -1,8 +1,10 @@
+import './itemTable.css'
+
 const NameCell = ({ isEditing, value, onValueChange }) => {
 
     return isEditing ? (
       <td>
-        <input
+        <textarea
           type="text"
           value={value}
           onChange={(e) => onValueChange(e.target.value)}

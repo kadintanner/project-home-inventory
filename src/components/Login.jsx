@@ -1,8 +1,11 @@
 import React from 'react';
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router';
 
 const Login = () => {
+
+    const navigate = useNavigate()
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
@@ -20,6 +23,7 @@ const login = async () => {
             setLoginStatus(response.data[0].username)
         }
         console.log(response.data)
+        navigate("/itemTable")
     })
 } 
 
@@ -41,7 +45,7 @@ const login = async () => {
                 />
                 <br></br>
                 <br></br>
-                <button onClick={login}>Login</button>
+                <button type="submit" onClick={login}>Login</button>
                 <br />
                 <br />
                 <a href='/register'>New to Home Inventory? Create an account here</a>

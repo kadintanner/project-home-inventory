@@ -14,14 +14,14 @@ const handlerFunctions = {
 
     register: async (req, res) => {
         const { username, password } = req.body
-
+        console.log(username, password)
         const alreadyExists = await User.findAll({
             where: {
                 username
             }
         })
         if (alreadyExists[0]) {
-            res.status(400).send('Username already exists')
+            res.status(200).send('Username already exists')
         } else {
 
             const newUser = await User.create({
@@ -42,6 +42,7 @@ const handlerFunctions = {
 
     // ITEM TABLE FUNCTIONS
 
+
     items: (req, res) => {
         res.send(TEST_DATA)
     },
@@ -51,7 +52,7 @@ const handlerFunctions = {
     },
 
 
-    addItem: (req, res) => {
+    addItem: async (req, res) => {
         const description = req.body.description
 
         const newObj = {
@@ -62,10 +63,10 @@ const handlerFunctions = {
         }
 
         TEST_DATA.push(newObj)
-
         globalId++
-
         res.send(newObj)
+
+    
     },
 
     deleteItem: (req, res) => {
@@ -89,6 +90,8 @@ const handlerFunctions = {
 
         res.send(tableItem)
     },
+
+
 
     // CATEGORY TAB FUNCTIONS
 

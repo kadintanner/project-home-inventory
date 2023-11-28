@@ -1,0 +1,18 @@
+.register {
+
+    text-align: center;
+    height: 400px;
+    width: 450px;
+    background-color: transparent;
+
+
+    border: solid white;
+    border-width: 4px;
+    border-radius: 15px;
+
+
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}

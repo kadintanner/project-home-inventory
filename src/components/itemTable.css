@@ -1,0 +1,34 @@
+.item-table {
+    table-layout: fixed;
+    overflow-x: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 80rem;
+}
+
+.topnav {
+    background-color: white;
+    overflow: hidden;
+  }
+
+textarea {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+::-webkit-resizer {
+    display: none;
+  }  
+
+select {
+    border: none;
+    outline: none;
+    background: transparent
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent
+}

@@ -1,8 +1,11 @@
+import './itemTable.css'
+
 const LocationCell = ({ isEditing, value, onValueChange }) => {
 
     return isEditing ? (
       <td>
-        <input
+        <textarea
+          id="location-cell"
           type="text"
           value={value}
           onChange={(e) => onValueChange(e.target.value)}

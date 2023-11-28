@@ -28,7 +28,8 @@ let itemTestData = [
         description: 'Test description goes here.',
         cost: 0,
         date_aquired: '2023-11-11',
-        location_aquired: 'Test Location'
+        location_aquired: 'Test Location',
+        category: 'test category'
     }
 ]
 
@@ -39,7 +40,8 @@ const itemsInDB = await Promise.all(
             description: item.description,
             cost: item.cost,
             date_aquired: item.date_aquired,
-            location_aquired: item.location_aquired
+            location_aquired: item.location_aquired,
+            category: item.category
         })
 
         return newItem;

@@ -6,7 +6,9 @@ import AddButton from './AddButton'
 import CategoryTabs from './CategoryTabs'
 import Navbar from './Navbar'
 import Table from 'react-bootstrap/Table';
-import AddCategoryButton from './bootstrap-tabs/AddCategoryButton'
+import '../App.css'
+import './itemTable.css'
+// import AddCategoryButton from './bootstrap-tabs/AddCategoryButton'
 
 const ItemTable = () => {
   const [currentItemData, setCurrentItemData] = useState([])
@@ -40,7 +42,7 @@ const ItemTable = () => {
   })
 
   const addRow = async () => {
-    const response = await axios.post('/addItem', { description: 'New Item' })
+    const response = await axios.post('/addItem', { description: '' })
     setCurrentItemData([...currentItemData, response.data])
   }
 
@@ -53,28 +55,33 @@ const ItemTable = () => {
   }
 
   return (
+    <>
+      <div className="topnav">
+        <a class="active" href="#home">HOME INVENTORY</a>
+      </div>
 
-    <div>
-      <Navbar sticky="top" />
-      <br />
-      <br />
-      <br />
-      <CategoryTabs />
-      <br />
-      <br />
-      <Table 
-        id="item-table"
-        striped bordered hover size="sm">
-        <thead>
-          <TableHeader />
-        </thead>
-        <tbody>
-          {rows}
-        </tbody>
-      </Table>
-      <AddButton addClick={addRow} />
-      <AddCategoryButton />
-    </div>
+
+      <div className='item-table'>
+        <br />
+        <br />
+        <br />
+        <CategoryTabs />
+        <br />
+        <br />
+        <Table
+          id="item-table"
+          striped bordered hover size="sm">
+          <thead>
+            <TableHeader />
+          </thead>
+          <tbody>
+            {rows}
+          </tbody>
+        </Table>
+        <AddButton className="add-button" addClick={addRow} />
+        {/* <AddCategoryButton /> */}
+      </div>
+    </>
   );
 }
 
