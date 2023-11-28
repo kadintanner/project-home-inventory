@@ -57,7 +57,7 @@ const ItemTable = () => {
   return (
     <>
       <div className="topnav">
-        <a class="active" href="#home">HOME INVENTORY</a>
+        <a className="active" href="/">HOME INVENTORY</a>
       </div>
 
 
@@ -78,7 +78,9 @@ const ItemTable = () => {
             {rows}
           </tbody>
         </Table>
-        <AddButton className="add-button" addClick={addRow} />
+      </div>
+      <div className='add-button'>
+        <AddButton addClick={addRow} />
         {/* <AddCategoryButton /> */}
       </div>
     </>

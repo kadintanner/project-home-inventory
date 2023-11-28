@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react'
 import axios from 'axios'
-import '../index.css'
 import './register.css'
 import { useNavigate } from 'react-router';
 import Navbar from './Navbar'
@@ -42,11 +41,11 @@ const Registration = () => {
                     <br />
                     <label>Username</label>
                     <br />
-                    <input type='text' onChange={(e) => { setUsernameReg(e.target.value) }} />
+                    <input id="user" type='text' onChange={(e) => { setUsernameReg(e.target.value) }} />
                     <br />
                     <label>Password</label>
                     <br />
-                    <input type='text' onChange={(e) => { setPasswordReg(e.target.value) }} />
+                    <input id="pass" type='text' onChange={(e) => { setPasswordReg(e.target.value) }} />
                     <br />
                     <button type="submit" onClick={register}>Create Account</button>
                 </form>

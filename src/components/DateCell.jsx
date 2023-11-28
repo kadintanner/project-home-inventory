@@ -8,7 +8,7 @@ const DateCell = ({ isEditing, value, onValueChange }) => {
         <input
 
           type="date"
-          id="date"
+          id="the-date"
           name="date"
           value={value}
           onChange={(e) => onValueChange(e.target.value)}

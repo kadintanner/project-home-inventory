@@ -1,18 +1,32 @@
 .register {
-
     text-align: center;
     height: 400px;
     width: 450px;
-    background-color: transparent;
 
+    background-color: transparent;
 
     border: solid white;
     border-width: 4px;
     border-radius: 15px;
 
-
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 50px;
     padding-bottom: 40px;
+}
+
+.pass {
+    width: 100% !important ;
+    padding: 12px 20px !important;
+    margin: 8px 0 !important;
+    box-sizing: border-box !important;
+    background-color: white !important;
+}
+
+.user {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: white;
 }
