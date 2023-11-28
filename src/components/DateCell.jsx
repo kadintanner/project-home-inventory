@@ -6,7 +6,7 @@ const DateCell = ({ isEditing, value, onValueChange }) => {
     <td>
       <form action="/action_page.php">
         <input
-
+          className='date-cell'
           type="date"
           id="the-date"
           name="date"

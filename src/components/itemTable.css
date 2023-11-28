@@ -1,3 +1,15 @@
+.item-table-body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+
+    /* background-image: url("https://images.pexels.com/photos/3063174/pexels-photo-3063174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
+    background-image: linear-gradient(to top right, #015633, #68a954);
+    background-size: cover;
+}
+
 .item-table {
     table-layout: fixed;
     overflow-x: auto;
@@ -12,14 +24,24 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 20px
-  }
-/* 
-  .the-date {
-    border: none;
-    outline: none;
-    background: transparent;
-  } */
+    height: 70px;
+    text-align: left;
+}
+
+.active {
+    background-color: white;
+    color: black;
+    /* border: 2px solid green; */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: green;
+    color: white;
+}
 
 textarea {
     border: none;
@@ -28,8 +50,9 @@ textarea {
 }
 
 ::-webkit-resizer {
+    /* this is preventing the risizer to show up */
     display: none;
-  }  
+}
 
 select {
     border: none;
@@ -37,7 +60,7 @@ select {
     background: transparent
 }
 
-input {
+.date-cell {
     border: none;
     outline: none;
     background: transparent
@@ -45,17 +68,25 @@ input {
 
 .add-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 40px;
+    right: 40px;
 }
 
 .THE-BUTTON {
-    background-color: #4CAF50;
+    background-color: #242424;
     color: white;
     border: none;
     border-radius: 50%;
     padding: 20px;
     font-size: 16px;
     cursor: pointer;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#items-h1 {
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 100px;
+    top: 150px;
 }

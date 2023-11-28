@@ -34,24 +34,32 @@ const Registration = () => {
 
 
     return (
-      
-            <div className='register'>
+        <body className="register-body">
+            <h1 className='title-reg'>Organize Your Life</h1>
+            <h3 className='sub-title-reg'>With Home Inventory</h3>
+
+            <div className="reg-nav">
+                <a className="active" href="/">Home Inventory</a>
+            </div>
+
+            <div className='register-div'>
                 <form>
                     <h1>Create an Account</h1>
                     <br />
                     <label>Username</label>
                     <br />
-                    <input id="user" type='text' onChange={(e) => { setUsernameReg(e.target.value) }} />
+                    <input className="user" type='text' onChange={(e) => { setUsernameReg(e.target.value) }} />
                     <br />
                     <label>Password</label>
                     <br />
-                    <input id="pass" type='text' onChange={(e) => { setPasswordReg(e.target.value) }} />
+                    <input className="pass" type='text' onChange={(e) => { setPasswordReg(e.target.value) }} />
                     <br />
                     <button type="submit" onClick={register}>Create Account</button>
                 </form>
                 <br />
                 <a href='/login'>Already have an account? Login here</a>
             </div>
+        </body>
     );
 }
 

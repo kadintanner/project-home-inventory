@@ -1,10 +1,22 @@
-.register {
+.register-body {
+    margin: 0;
+    /* display: flex; */
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-image: url("https://images.pexels.com/photos/3063174/pexels-photo-3063174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    /* background-image: linear-gradient(to top right, #015633, #68a954); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.register-div {
     text-align: center;
     height: 400px;
     width: 450px;
-
     background-color: transparent;
-
+    color: white;
     border: solid white;
     border-width: 4px;
     border-radius: 15px;
@@ -13,14 +25,42 @@
     padding-right: 40px;
     padding-top: 50px;
     padding-bottom: 40px;
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
+
+    /* Not Working Properly!!!!!!! */
+    position: absolute;
+    left: 525px;
+    top: 1000px;
+    bottom: 500px
+}
+
+.title-reg {
+    position: absolute;
+    top: 46%;
+    width: 100%;
+    text-align: center;
+    font-size: 56px;
+    color: white;
+}
+
+.sub-title-reg {
+    position: absolute;
+    top: 56%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: white;
 }
 
 .pass {
-    width: 100% !important ;
-    padding: 12px 20px !important;
-    margin: 8px 0 !important;
-    box-sizing: border-box !important;
-    background-color: white !important;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .user {
@@ -29,4 +69,31 @@
     margin: 8px 0;
     box-sizing: border-box;
     background-color: white;
+    border-radius: 10px;
+}
+
+.reg-nav {
+    background-color: white;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    text-align: left;
+    transition: top 0.3s;
+}
+
+.active {
+    background-color: white;
+    color: black;
+    /* border: 2px solid green; */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover {
+    background-color: green;
+    color: white;
 }

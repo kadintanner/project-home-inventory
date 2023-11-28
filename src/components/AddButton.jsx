@@ -5,7 +5,7 @@ const AddButton = ({ addClick }) => {
     <tr>
       <td></td>
       <td colSpan={4} >
-        <button id="THE-BUTTON" onClick={addClick}>Add Item</button>
+        <button className="THE-BUTTON" onClick={addClick}>Add Item</button>
       </td>
     </tr>
   );

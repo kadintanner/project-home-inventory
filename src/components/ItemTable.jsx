@@ -6,7 +6,7 @@ import AddButton from './AddButton'
 import CategoryTabs from './CategoryTabs'
 import Navbar from './Navbar'
 import Table from 'react-bootstrap/Table';
-import '../App.css'
+// import '../App.css'
 import './itemTable.css'
 // import AddCategoryButton from './bootstrap-tabs/AddCategoryButton'
 
@@ -55,12 +55,14 @@ const ItemTable = () => {
   }
 
   return (
-    <>
+    <body className='item-table-body'>
       <div className="topnav">
-        <a className="active" href="/">HOME INVENTORY</a>
+        <a className="active" href="/">Home Inventory</a>
       </div>
-
-
+    <div class="container">
+      <h1 id="items-h1">All Items</h1>
+    </div>
+        <br />
       <div className='item-table'>
         <br />
         <br />
@@ -83,7 +85,7 @@ const ItemTable = () => {
         <AddButton addClick={addRow} />
         {/* <AddCategoryButton /> */}
       </div>
-    </>
+    </body>
   );
 }
 
