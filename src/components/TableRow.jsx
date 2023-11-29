@@ -8,6 +8,7 @@ import axios from 'axios'
 import ModeButtons from './ModeButtons'
 import CategoryCell from './CategoryCell'
 import formatCurrency from '../utils/formatCurrency'
+import './itemTable.css'
 
 const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
 
@@ -44,50 +45,54 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
 
     return (
         <>
-                <td>{formatCurrency}</td>
-            <tr>
+            <tr className='table-rows'>
                 <NameCell
                     isEditing={editMode}
                     value={name}
                     onValueChange={setName}
-                />
+                    />
 
                 <DescriptionCell
                     isEditing={editMode}
                     value={description}
                     onValueChange={setDescription}
-                />
+                    />
 
                 <CostCell
                     isEditing={editMode}
                     value={cost}
                     onValueChange={setCost}
                     />
+                    {formatCurrency}
 
                 <DateCell
                     isEditing={editMode}
                     value={date}
                     onValueChange={setDate}
-                />
+                    />
 
                 <LocationCell
                     isEditing={editMode}
                     value={location}
                     onValueChange={setLocation}
-                />
+                    />
 
                 <CategoryCell
                     isEditing={editMode}
                     value={category}
                     onValueChange={setCategory}
-                />
+                    />
 
                 <ModeButtons
                     isEditing={editMode}
                     saveClick={changeNormalMode}
                     editClick={changeEditMode}
                     funkyDelete={deleteFunc}
-                />
+                    />
+                    {/* <div>
+
+                    <td className='format-currency'>{formatCurrency}</td>
+                    </div> */}
             </tr>
         </>
     )

@@ -4,7 +4,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.712);
+  color: white;
   background-color: #0c0c0c;
 
   font-synthesis: none;
@@ -39,9 +39,14 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: white;
+  background-color: transparent;
+  color: rgb(103, 179, 255);
   cursor: pointer;
   transition: border-color 0.25s;
+}
+
+text {
+  color: white;
 }
 
 

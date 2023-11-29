@@ -5,9 +5,10 @@ import TableRow from './TableRow'
 import AddButton from './AddButton'
 import CategoryTabs from './CategoryTabs'
 import Navbar from './Navbar'
-import Table from 'react-bootstrap/Table';
+// import Table from 'react-bootstrap/Table';
 // import '../App.css'
 import './itemTable.css'
+import '../index.css'
 // import AddCategoryButton from './bootstrap-tabs/AddCategoryButton'
 
 const ItemTable = () => {
@@ -56,63 +57,60 @@ const ItemTable = () => {
 
 
   document.addEventListener('DOMContentLoaded', function () {
-  // Super complicated math from StackOverFlow that i don't understand! (It made the navbar pretty though)
+    // Super complicated math from StackOverFlow that i don't understand! (It made the navbar pretty though)
 
-  const itemNavbar = document.getElementById("topnav");
-  let lastScrollTop = 0;
-  addEventListener("scroll", () => {
-    const scrollTop =
-      window.pageYOffset || document.documentElement.scrollTop;
-    const distance = scrollTop - lastScrollTop;
-    const currentTop = parseInt(
-      getComputedStyle(itemNavbar).top.split("px")
-    );
-    let amount = Math.max(
-      Math.min(
-        currentTop +
-        (distance < 0
-          ? Math.abs(distance)
-          : -Math.abs(distance)
-        ) * 40, 0), -80
-    );
-    console.log(amount, currentTop, Math.abs(distance));
-    itemNavbar.style.top = `${amount}px`;
-    lastScrollTop = scrollTop;
-  });
-  })  
+    const itemNavbar = document.getElementById("topnav");
+    let lastScrollTop = 0;
+    addEventListener("scroll", () => {
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const distance = scrollTop - lastScrollTop;
+      const currentTop = parseInt(
+        getComputedStyle(itemNavbar).top.split("px")
+      );
+      let amount = Math.max(
+        Math.min(
+          currentTop +
+          (distance < 0
+            ? Math.abs(distance)
+            : -Math.abs(distance)
+          ) * 40, 0), -80
+      );
+      console.log(amount, currentTop, Math.abs(distance));
+      itemNavbar.style.top = `${amount}px`;
+      lastScrollTop = scrollTop;
+    });
+  })
 
   return (
-    <body className='item-table-body'>
+    <body className='body'>
 
       <div id="topnav">
-        <a className="active" href="/">Home Inventory</a>
+        <a className="active" href="/">HOME INVENTORY</a>
+        <a className='profile'>PROFILE</a>
       </div>
 
-      <div class="container">
+      {/* <div class="container">
         <h1 id="items-h1">All Items</h1>
-      </div>
-
-      <div className='item-table'>
-        <br />
-        <br />
-        <br />
-        <CategoryTabs />
-        <br />
-        <br />
-        <Table
-          id="item-table"
-          striped bordered hover size="sm">
-          <thead>
-            <TableHeader />
-          </thead>
-          <tbody>
-            {rows}
-          </tbody>
-        </Table>
-      </div>
-      <div className='add-button'>
-        <AddButton addClick={addRow} />
-        {/* <AddCategoryButton /> */}
+      </div> */}
+      <div className='item-table-div'>
+        <div class="child" className='item-table'>
+          <CategoryTabs />
+          <table
+            id="item-table"
+            striped bordered hover size="sm">
+            <thead>
+              <TableHeader />
+            </thead>
+            <tbody>
+              {rows}
+            </tbody>
+          </table>
+        </div>
+        <div className='add-button'>
+          <AddButton addClick={addRow} />
+          {/* <AddCategoryButton /> */}
+        </div>
       </div>
     </body>
   );

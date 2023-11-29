@@ -1,3 +1,4 @@
+
 .register-body {
     margin: 0;
     /* display: flex; */
@@ -19,7 +20,7 @@
     color: white;
     border: solid white;
     border-width: 1px;
-    border-radius: 15px;
+    border-radius: 12px;
 
     padding-left: 40px;
     padding-right: 40px;
@@ -46,6 +47,7 @@
     font-size: 18px;
     color: white;
     border: 1px solid white;
+    border-radius: 3px;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -55,21 +57,23 @@
 .title-reg {
     position: absolute;
     top: 46%;
-    left: 27%;
+    /* right: 8.7%; */
     width: 100%;
-    text-align: center;
+    text-align: right;
     font-size: 56px;
     color: white;
+    padding-right: 128px;
 }
 
 .sub-title-reg {
     position: absolute;
     top: 55.5%;
-    left: 35.1%;
+    /* right: 9%; */
     width: 100%;
-    text-align: center;
+    text-align: right;
     font-size: 20px;
     color: white;
+    padding-right: 130px;
 }
 
 .pass {
@@ -79,7 +83,7 @@
     margin: 8px 0;
     box-sizing: border-box;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     border-color: none;
 }
 
@@ -90,7 +94,7 @@
     margin: 8px 0;
     box-sizing: border-box;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     border-color: none;
 }
 
@@ -165,7 +169,7 @@
     top: 50px;
 }
 
-button:hover {
+.reg-button:hover {
     background-color: rgba(1, 97, 193, 0.633);
 }
 

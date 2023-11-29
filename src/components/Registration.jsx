@@ -65,7 +65,7 @@ const Registration = () => {
 
             <div id="navbar" >
                 <a className="active" href="/">HOME INVENTORY</a>
-                <i id='profile-icon' class="bi bi-person-circle"></i>
+                {/* <i id='profile-icon' class="bi bi-person-circle"></i> */}
                 <a className='profile'>PROFILE</a>
             </div>
 
