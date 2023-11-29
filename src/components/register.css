@@ -167,6 +167,7 @@
     color: rgba(255, 255, 255, 0.704);
     position: relative;
     top: 50px;
+    border-radius: 6px;
 }
 
 .reg-button:hover {
