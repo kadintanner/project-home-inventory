@@ -12,13 +12,13 @@
 }
 
 .register-div {
-    text-align: center;
-    height: 400px;
-    width: 450px;
+
+    height: 445px;
+    width: 500px;
     background-color: transparent;
     color: white;
     border: solid white;
-    border-width: 4px;
+    border-width: 1px;
     border-radius: 15px;
 
     padding-left: 40px;
@@ -31,14 +31,31 @@
 
     /* Not Working Properly!!!!!!! */
     position: absolute;
-    left: 525px;
+    left: 535px;
     top: 1000px;
-    bottom: 500px
+    bottom: 1000px
+}
+
+.get-started-button {
+    background-color: transparent;
+    position: absolute;
+    top: 66%;
+    left: 81.3%;
+    width: 10%;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .title-reg {
     position: absolute;
     top: 46%;
+    left: 27%;
     width: 100%;
     text-align: center;
     font-size: 56px;
@@ -47,32 +64,37 @@
 
 .sub-title-reg {
     position: absolute;
-    top: 56%;
+    top: 55.5%;
+    left: 35.1%;
     width: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
 }
 
 .pass {
-    width: 100%;
+    width: 77%;
+    height: 40px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     background-color: white;
     border-radius: 10px;
+    border-color: none;
 }
 
 .user {
-    width: 100%;
+    width: 77%;
+    height: 40px;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     background-color: white;
     border-radius: 10px;
+    border-color: none;
 }
 
-.reg-nav {
+#navbar {
     background-color: white;
     overflow: hidden;
     position: fixed;
@@ -80,20 +102,87 @@
     width: 100%;
     height: 70px;
     text-align: left;
-    transition: top 0.3s;
+    transition: top 0.5s;
+}
+
+#profile-icon {
+    color: black;
 }
 
 .active {
     background-color: white;
     color: black;
     /* border: 2px solid green; */
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align: center;
+    position: relative;
+    top: 15%;
+    left:3%;
     text-decoration: none;
+    font-size: 20px;
     display: inline-block;
+    font-weight: lighter;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-stretch: extra-expanded;
 }
 
-a:hover {
-    background-color: green;
+.profile {
+    background-color: transparent;
+    color: black;
+    padding: 10px 10px;
+    text-align: center;
+    position: relative;
+    top: 15%;
+    left: 79%;
+    text-decoration: none;
+    font-size: 20px;
+    display: inline-block;
+    font-weight: lighter;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-stretch: extra-expanded;
+}
+
+.get-started-button:hover {
+    background-color: rgba(255, 255, 255, 0.167);
     color: white;
+}
+
+.empty-div {
+    position: absolute;
+    color: #151515;
+    top: 1600px;
+    right: 20px;
+}
+
+.link {
+    color: white;
+}
+
+.reg-button {
+    background-color: rgba(0, 128, 255, 0.627);
+    color: rgba(255, 255, 255, 0.704);
+    position: relative;
+    top: 50px;
+}
+
+button:hover {
+    background-color: rgba(1, 97, 193, 0.633);
+}
+
+#user-label {
+    text-align: left    ;
+    color: rgba(128, 128, 128, 0.703);
+    position: absolute;
+    left: 19%;
+}
+
+#pass-label {
+    text-align: left;
+    color: rgba(128, 128, 128, 0.702);
+    position: absolute;
+    left: 19%;
+}
+
+#create-account-h1 {
+    color: rgba(255, 255, 255, 0.914);
 }

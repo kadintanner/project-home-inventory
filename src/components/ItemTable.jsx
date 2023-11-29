@@ -54,15 +54,44 @@ const ItemTable = () => {
     }
   }
 
+
+  document.addEventListener('DOMContentLoaded', function () {
+  // Super complicated math from StackOverFlow that i don't understand! (It made the navbar pretty though)
+
+  const itemNavbar = document.getElementById("topnav");
+  let lastScrollTop = 0;
+  addEventListener("scroll", () => {
+    const scrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
+    const distance = scrollTop - lastScrollTop;
+    const currentTop = parseInt(
+      getComputedStyle(itemNavbar).top.split("px")
+    );
+    let amount = Math.max(
+      Math.min(
+        currentTop +
+        (distance < 0
+          ? Math.abs(distance)
+          : -Math.abs(distance)
+        ) * 40, 0), -80
+    );
+    console.log(amount, currentTop, Math.abs(distance));
+    itemNavbar.style.top = `${amount}px`;
+    lastScrollTop = scrollTop;
+  });
+  })  
+
   return (
     <body className='item-table-body'>
-      <div className="topnav">
+
+      <div id="topnav">
         <a className="active" href="/">Home Inventory</a>
       </div>
-    <div class="container">
-      <h1 id="items-h1">All Items</h1>
-    </div>
-        <br />
+
+      <div class="container">
+        <h1 id="items-h1">All Items</h1>
+      </div>
+
       <div className='item-table'>
         <br />
         <br />
