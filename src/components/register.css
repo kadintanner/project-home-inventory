@@ -85,6 +85,7 @@
     background-color: white;
     border-radius: 8px;
     border-color: none;
+    color: black;
 }
 
 .user {
@@ -96,6 +97,7 @@
     background-color: white;
     border-radius: 8px;
     border-color: none;
+    color: black;
 }
 
 #navbar {
