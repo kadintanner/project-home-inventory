@@ -90,6 +90,14 @@ const ItemTable = () => {
         <a className='profile'>PROFILE</a>
       </div>
 
+      <div id="filler">
+        <h1 className='table-h1'>Organize Your Belongings</h1>
+        <h5 className='table-h5'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </h5>
+      </div>
+
+
       {/* <div class="container">
         <h1 id="items-h1">All Items</h1>
       </div> */}

@@ -1,15 +1,17 @@
 import React from 'react';
+import './itemTable.css'
 
 const ModeButtons = ({ isEditing, saveClick, editClick, funkyDelete }) => {
 
     return isEditing ? (
         <td>
-            <button onClick={saveClick}>Save</button>
+            <button className="save-button" onClick={saveClick}>Save</button>
         </td>
   ) : (
         <td>
-            <button onClick={funkyDelete}>Delete</button>
-            <button onClick={editClick}>Edit</button>
+            <button className="edit-button" onClick={editClick}>Edit </button>
+                or
+            <button className="delete-button" onClick={funkyDelete}> Delete</button>
         </td>
   )
 }

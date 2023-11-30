@@ -77,11 +77,11 @@ const TableRow = ({ initialIsEditing, initialItemData, deleteFunc, id }) => {
                     onValueChange={setLocation}
                     />
 
-                <CategoryCell
+                {/* <CategoryCell
                     isEditing={editMode}
                     value={category}
                     onValueChange={setCategory}
-                    />
+                    /> */}
 
                 <ModeButtons
                     isEditing={editMode}

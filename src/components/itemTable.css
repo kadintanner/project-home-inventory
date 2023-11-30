@@ -7,7 +7,7 @@
 
     /* background-image: url("https://images.pexels.com/photos/3063174/pexels-photo-3063174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
     /* background-image: linear-gradient(to top right, #015633, #68a954); */
-    background-color: #0c0c0c;
+    background-color: #141414;
     background-size: cover;
     color: white;
 }
@@ -20,7 +20,7 @@
 
 #item-table {
     table-layout: fixed;
-    top: 200px;
+    top: 70px;
     /* border-spacing: 0; */
     width: 100%;
     position: relative;
@@ -34,27 +34,82 @@
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
+}
+
+#filler {
+    background-color: #141414;
+    position: relative;
+    height: 300px;
+    top: 70px;
+}
+
+.table-h1 {
+    position: relative;
+    top: 100px;
+    font-size: 60px;
+    Right: 14.2%;
+}
+
+.table-h5 {
+    position: relative;
+    top: 115px;
+    /* font-size: 60px; */
+    Right: 20.8%;
+    font-weight: lighter;
 }
 
 #item-table thead th, #item-table td {
     /* border: 1px solid #ddd; */
     padding: 15px;
+    border-bottom: 1px;
+    border: gray;
     /* border-spacing: 100px 100px; */
 }
 
 #item-table tr {
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(16, 16, 16);
 }
 
 #item-table tr:nth-child(even){
-    background-color: #1f1f1f;
+    background-color: #000000;
 }
 
 #item-table tr:hover {
-    background-color: rgba(221, 221, 221, 0.104);
+    background-color: rgba(99, 99, 99, 0.065);
+}
+
+.delete-button {
+    font-size: small;
+    padding: 0%;
+    padding-left: 8px;
+    color: rgb(255, 74, 104)
+}
+
+.delete-button:hover {
+    color: rgb(254, 135, 155);
+}
+
+.edit-button {
+    font-size: small;
+    padding: 0%;
+    padding-right: 8px;
+}
+
+.edit-button:hover {
+    color: rgb(165, 209, 254);
+}
+
+.save-button {
+    font-size: small;
+    padding: 0%;
+    color: rgb(41, 188, 41);
+}
+
+.save-button:hover {
+    color: rgb(104, 225, 104);
 }
 
 #topnav {
@@ -78,22 +133,6 @@
     position: relative;
     top: 15%;
     left:3%;
-    text-decoration: none;
-    font-size: 20px;
-    display: inline-block;
-    font-weight: lighter;
-    /* font-family: 'Courier New', Courier, monospace; */
-    font-stretch: extra-expanded;
-}
-
-.profile {
-    background-color: transparent;
-    color: black;
-    padding: 10px 10px;
-    text-align: center;
-    position: relative;
-    top: 15%;
-    left: 79%;
     text-decoration: none;
     font-size: 20px;
     display: inline-block;
@@ -151,34 +190,38 @@ select {
 
 .add-button {
     position: fixed;
-    bottom: 40px;
-    right: 690px;
+    bottom: 40%;
+    /* right: 680px; */
     text-align: center;
 }
 
 .THE-BUTTON {
-    background-color: green;
+    background-color: rgb(24, 154, 24);
     color: white;
     border: none;
-
+    
     padding: 20px;
     font-size: 16px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-
+    
     height: 60px;
     line-height: 20px;  
-    width: 130px;  
+    width: 150px;  
     /* font-size: 2em; */
     font-weight: bold;
+    
+    border-radius: 6px;
 
-
-    text-align: center;
+    /* text-align: center; */
     cursor: pointer;
 }
 
 .THE-BUTTON:hover {
-    background-color: #545454;
+    background-color: green;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+
+    height: 62px;
+    width: 152px; 
 }
 
 #items-h1 {

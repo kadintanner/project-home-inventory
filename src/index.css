@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: white;
-  background-color: #0c0c0c;
+  background-color: #141414;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,8 +14,9 @@
   -webkit-text-size-adjust: 100%;
 }
 
-/* body {
-  margin: 0;
+body {
+  color: white;
+  /* margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -23,8 +24,8 @@
 
   /* background-image: url("https://images.pexels.com/photos/3063174/pexels-photo-3063174.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
   /* background-image: linear-gradient(to top right, #015633, #68a954);
-  background-size: cover;
-}  */
+  background-size: cover; */
+} 
 
 /* h1 {
   font-size: 3.2em;
