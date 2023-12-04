@@ -2,4 +2,8 @@
 
 This is a README.md
 
-// TODO
+Run these commands:
+npm install
+npm run initdb
+npm run seed
+npm run dev
